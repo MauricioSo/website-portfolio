@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+    <style>
+        /* Estética Brutalista / Eficiencia */
+        :root {
+            --brand-gradient: linear-gradient(45deg, #1e3a8a, #ef4444);
+            --bg-color: #ffffff;
+            --text-color: #000000;
+        }
+
+        body {
+            margin: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: sans-serif;
+            /* Aquí luego inyectaremos tu WOFF2 */
+            line-height: 1.2;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        {% block content %}{% endblock content %}
+    </main>
+</body>
+
+</html>
